@@ -28,6 +28,11 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+
+    <div class="logout" ng-controller="LoginCtrl as controller" ng-show="controller.isAuth" ng-click="controller.logout()">
+      <p>Logout</p>
+    </div>
+
     <div ui-view=""></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

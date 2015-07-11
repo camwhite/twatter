@@ -13,4 +13,4 @@
         img(ng-src="{{ twat.user.avatar }}")
         span(ng-click="controller.removeTwat(twat)") {{ twat.user.name }}
       .twat
-        p.content(ng-bind-html="twat.content | linky:'_blank'")
+        p(ng-bind-html="twat.content | linky:'_blank'")

@@ -1,25 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
-@import url(http://fonts.googleapis.com/css?family=Carrois+Gothic+SC);
-
-@mixin randomizer {
-  @for $i from 1 through 110 {
-    &:nth-child(#{$i}) {
-      background: hsl(60 * $i, 100%, 60%);
-    }
+.twatter {
+  h1 {
+    padding: 10px 0 5px;
+    background: crimson;
+    color: gold;
   }
 }
-
-body {
-  background-size: 30%;
-  font-family: 'Carrois Gothic SC';
-}
-
-h1 {
-  padding: 10px 0 5px;
-  background: crimson;
-  color: gold;
-}
-
 .profile {
   width: 130px;
   height: 130px;

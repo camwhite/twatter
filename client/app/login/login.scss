@@ -1,0 +1,65 @@
+.login {
+  @include align-hack;
+  .login-btn {
+    padding: 20px 40px;
+    background: dodgerblue;
+    border: none;
+    outline: none;
+  }
+}
+
+.callout {
+  @include align-hack;
+  top: 80%;
+  p {
+    text-align: right;
+  }
+}
+
+.content {
+  position: relative;
+  height: 100vh;
+  margin-top: 100vh;
+  background: lime;
+  box-shadow: 0 4px 8px rgba(black, .2);
+  z-index: 2;
+  .selling-points {
+    @include align-hack;
+    .point {
+      margin: 80px 0;
+      text-align: right;
+      span {
+        color: white;
+        font-size: 30px;
+      }
+      i {
+        margin-left: 10px;
+        padding: 30px;
+        background: white;
+        border-radius: 100%;
+        color: limegreen;
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  height: 40vh;
+  background: purple;
+  .footer-content {
+    @include align-hack;
+    h1 {
+      color: white;
+      font-size: 60px;
+      white-space: nowrap;
+    }
+    p {
+      margin-top: 50px;
+      text-align: center;
+    }
+  }
+}
+
+
