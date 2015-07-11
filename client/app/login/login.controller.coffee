@@ -1,19 +1,18 @@
 'use strict'
 
 angular.module 'twatterApp'
-.controller 'LoginCtrl', ($state, $location, $firebaseArray, Auth) ->
+.controller 'LoginCtrl', ($rootScope, $state, $location, $firebaseArray, Auth) ->
   ref = new Firebase 'https://twat.firebaseio.com/'
   userSync = $firebaseArray ref.child 'users'
 
   @users = userSync
-  @isAuth = Auth.getAuth()
 
   @login = =>
     ref.authWithOAuthPopup 'twitter', (error, authData) =>
       if error
         console.log "Login Failed!", error
       else
-        @isAuth = authData?
+        $rootScope.isAuth = authData?
 
         @user = {
           name: authData.twitter.displayName

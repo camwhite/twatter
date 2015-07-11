@@ -29,9 +29,7 @@
 
     <!-- Add your site or application content here -->
 
-    <div class="logout" ng-controller="LoginCtrl as controller" ng-show="controller.isAuth" ng-click="controller.logout()">
-      <p>Logout</p>
-    </div>
+    <logout></logout>
 
     <div ui-view=""></div>
 
@@ -69,6 +67,7 @@
           <!-- injector:js -->
           <script src="app/login/login.js"></script>
           <script src="app/timeline/timeline.js"></script>
+          <script src="components/directives/logout/logout.js"></script>
           <script src="components/filters/reverse/reverse.js"></script>
           <script src="components/services/Auth/Auth.js"></script>
           <!-- endinjector -->
