@@ -5,6 +5,6 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/twatter-test'
+    uri: 'mongodb://localhost/twatterbackend-test'
   }
 };

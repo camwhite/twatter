@@ -5,7 +5,7 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/twatter-dev'
+    uri: 'mongodb://localhost/twatterbackend-dev'
   },
 
   seedDB: true

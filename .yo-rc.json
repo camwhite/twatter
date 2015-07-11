@@ -14,7 +14,8 @@
       "sass": true,
       "uirouter": true,
       "bootstrap": false,
-      "uibootstrap": false
+      "uibootstrap": false,
+      "mongoose": true
     }
   },
   "generator-ng-component": {
