@@ -5,8 +5,6 @@ angular.module 'twatterApp'
   ref = new Firebase 'https://twat.firebaseio.com/'
   $rootScope.isAuth = Auth.getAuth()
 
-  console.log $rootScope.isAuth
-
   @logout = ->
      ref.unauth()
      $state.go 'login'

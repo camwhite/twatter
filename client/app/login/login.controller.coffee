@@ -3,9 +3,6 @@
 angular.module 'twatterApp'
 .controller 'LoginCtrl', ($rootScope, $state, $location, $firebaseArray, Auth) ->
   ref = new Firebase 'https://twat.firebaseio.com/'
-  userSync = $firebaseArray ref.child 'users'
-
-  @users = userSync
 
   @login = =>
     ref.authWithOAuthPopup 'twitter', (error, authData) =>
@@ -20,14 +17,6 @@ angular.module 'twatterApp'
           uid: authData.uid
         }
 
-        @users.$add @user
-
         $state.go 'timeline'
-
-   @logout = =>
-     ref.unauth()
-     $state.go 'login'
-
-     @isAuth = Auth.getAuth()
 
   return this
