@@ -8,9 +8,11 @@
 .profile {
   width: 130px;
   height: 130px;
+  background-size: cover;
   p {
+    padding: 7px 4px;
+    background: rgba(black, .6);
     color: white;
-    -webkit-text-stroke: 1px black;
   }
 }
 

@@ -1,10 +1,11 @@
 'use strict'
 
 angular.module 'twatterApp'
-.controller 'TimelineCtrl', ($scope, $firebaseArray, Auth) ->
+.controller 'TimelineCtrl', ($scope, $firebaseArray, user) ->
   ref = new Firebase 'https://twat.firebaseio.com/'
 
-  @user = Auth.getCurrentUser()
+  @user = user
+  console.log user
 
   twatSync = $firebaseArray ref.child 'twats'
   @twats = twatSync

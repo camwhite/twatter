@@ -7,3 +7,6 @@ angular.module 'twatterApp'
     templateUrl: 'app/timeline/timeline.html'
     controller: 'TimelineCtrl'
     controllerAs: 'controller'
+    resolve:
+      user: (Auth) ->
+        Auth.getCurrentUser()

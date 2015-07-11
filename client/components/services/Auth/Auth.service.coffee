@@ -1,24 +1,25 @@
 'use strict'
 
 angular.module 'twatterApp'
-.service 'Auth', ->
+.factory 'Auth', (Api) ->
+  # Get user authentication state
   getAuth: ->
     ref = new Firebase 'https://twat.firebaseio.com/'
-
+    # Get firebase auth object
     authData = ref.getAuth()
-
+    # If authData exists return true
     if authData?
       true
-
+  # Get current user
   getCurrentUser: ->
     ref = new Firebase 'https://twat.firebaseio.com/'
-
+    # Get firebase auth object
     authData = ref.getAuth()
-
+    # If authData exists return user
     if authData?
-      @user = {
-        name: authData.twitter.displayName
-        avatar: authData.twitter.profileImageURL
-        uid: authData.uid
-      }
-
+      Api.get 'users', authData.uid
+  # Create user in the db
+  query: ->
+    Api.get 'users'
+  save: (user) ->
+    Api.post 'users', user

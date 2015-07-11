@@ -14,7 +14,8 @@ angular.module 'twatterApp', [
   $locationProvider.html5Mode true
 
 .run ($rootScope, $location, Auth) ->
+  auth = Auth.getAuth()
   # Redirect to login if route requires auth and you're not logged in
   $rootScope.$on '$stateChangeStart', ->
-    if !Auth.getAuth()
-      $location.path "/"
+    if !auth
+      $location.path '/'
