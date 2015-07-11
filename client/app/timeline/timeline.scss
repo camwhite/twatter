@@ -1,0 +1,57 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Carrois+Gothic+SC);
+
+@mixin randomizer {
+  @for $i from 1 through 110 {
+    &:nth-child(#{$i}) {
+      background: hsl(60 * $i, 100%, 60%);
+    }
+  }
+}
+
+body {
+  background-size: 30%;
+  font-family: 'Carrois Gothic SC';
+}
+
+h1 {
+  padding: 10px 0 5px;
+  background: crimson;
+  color: gold;
+}
+
+.profile {
+  width: 130px;
+  height: 130px;
+  background-size: cover;
+  p {
+    color: white;
+    -webkit-text-stroke: 1px black;
+  }
+}
+
+.twat-somethin {
+  p {
+    font-size: 12px;
+  }
+}
+
+.twats {
+  .twatted {
+    @include randomizer;
+    margin: 5px 0;
+    padding: 10px;
+    .user {
+      display: flex;
+      img {
+        border-radius: 100%;
+      }
+      span {
+        margin-left: 5px;
+        font-weight: 700;
+        align-self: center;
+      }
+    }
+  }
+}
+

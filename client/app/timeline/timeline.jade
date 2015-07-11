@@ -1,0 +1,16 @@
+.twatter(ng-show="controller.user")
+  h1
+    marquee TWATTER
+  .profile(ng-style="{'background-image': 'url({{ controller.user.avatar }})'}")
+    p {{ controller.user.name }}
+  .twat-somethin
+    input(type="text" placeholder="twat something" ng-model="controller.twat.content")
+    input(type="submit" ng-click="controller.twatSomething()")
+    p {{ controller.charCount }} characters left
+  .twats
+    .twatted(ng-repeat="twat in controller.twats | reverse")
+      .user
+        img(ng-src="{{ twat.user.avatar }}")
+        span(ng-click="controller.removeTwat(twat)") {{ twat.user.name }}
+      .twat
+        p.content(ng-bind-html="twat.content | linky:'_blank'")
