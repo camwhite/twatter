@@ -13,8 +13,8 @@ angular.module 'twatterApp'
       content: ''
   }
 
-  @charCount = 1337
-  originalCount = 1337
+  @charCount = 69
+  originalCount = 69
 
   $scope.$watch angular.bind(this, => @twat.content), (newVal, oldVal) =>
     if !newVal?
