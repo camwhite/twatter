@@ -14,7 +14,6 @@ exports.index = function(req, res) {
 // Get a single user
 exports.show = function(req, res) {
   User.findOne({uid: req.params.id}, function (err, user) {
-    console.log(user);
     if(err) { return handleError(res, err); }
     if(!user) { return res.send(404); }
     return res.json(user);
@@ -23,9 +22,14 @@ exports.show = function(req, res) {
 
 // Creates a new user in the DB.
 exports.create = function(req, res) {
-  User.create(req.body, function(err, user) {
+  User.findOne({uid: req.body.uid}, function (err, user) {
     if(err) { return handleError(res, err); }
-    return res.json(201, user);
+    if(!user) {
+      User.create(req.body, function(err, user) {
+        if (err) { return handleError(res, err) }
+        return res.json(user);
+      });
+    }
   });
 };
 
