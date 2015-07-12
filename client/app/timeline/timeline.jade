@@ -1,7 +1,7 @@
 .twatter(ng-show="controller.user")
   h1 twatter
   .profile(ng-style="{'background-image': 'url({{ controller.user.profile_image }})'}")
-    p {{ controller.user.display_name }}
+    p(ui-sref="profile") {{ controller.user.display_name }}
   .twat-somethin
     form
       input(type="text" placeholder="twat something" ng-model="controller.twat.content" ng-maxlength="69")
@@ -9,8 +9,10 @@
       p {{ controller.charCount }} characters left
   .twats
     .twatted(ng-repeat="twat in controller.twats | reverse")
+      .remove(ng-show="controller.user.uid == twat.user.uid ")
+        p(ng-click="controller.removeTwat(twat)") &times;
       .user
         img(ng-src="{{ twat.user.twitter_avatar }}")
-        span(ng-click="controller.removeTwat(twat)") {{ twat.user.display_name }}
+        a(ui-sref="profile({id: twat.user.uid})") {{ twat.user.display_name }}
       .twat
         p(ng-bind-html="twat.content | linky:'_blank'")

@@ -42,12 +42,15 @@
     @include randomizer;
     margin: 5px 0;
     padding: 10px;
+    .remove {
+      text-align: right;
+    }
     .user {
       display: flex;
       img {
         border-radius: 100%;
       }
-      span {
+      a {
         margin-left: 5px;
         font-weight: 700;
         align-self: center;
