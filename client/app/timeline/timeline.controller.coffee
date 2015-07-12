@@ -5,7 +5,6 @@ angular.module 'twatterApp'
   ref = new Firebase 'https://twat.firebaseio.com/'
 
   @user = user
-  console.log user
 
   twatSync = $firebaseArray ref.child 'twats'
   @twats = twatSync
@@ -26,9 +25,8 @@ angular.module 'twatterApp'
   @twatSomething = =>
     @twat.user =  @user
 
-    $scope.$emit 'twatted'
-
     @twats.$add @twat
+
     @twat.content = ''
 
   @removeTwat = (twat) =>
