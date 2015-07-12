@@ -30,6 +30,7 @@ exports.create = function(req, res) {
         return res.json(user);
       });
     }
+    else { return res.json(user) }
   });
 };
 
