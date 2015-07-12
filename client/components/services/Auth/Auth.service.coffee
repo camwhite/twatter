@@ -19,7 +19,10 @@ angular.module 'twatterApp'
     if authData?
       Api.get 'users', authData.uid
   # Create user in the db
-  query: ->
-    Api.get 'users'
+  query: (id) ->
+    if id?
+      Api.get 'users', id
+    else
+      Api.get 'users'
   save: (user) ->
     Api.post 'users', user

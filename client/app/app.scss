@@ -79,6 +79,7 @@ body {
 // Component styles are injected through grunt
 // injector
 @import 'login/login.scss';
+@import 'profile/profile.scss';
 @import 'timeline/timeline.scss';
 @import 'directives/logout/logout.scss';
 // endinjector
