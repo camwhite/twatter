@@ -9,6 +9,14 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
  * Mixins
  */
 
+@mixin responsive-window($bg-color, $z) {
+  position: relative;
+  height: 100vh;
+  background: $bg-color;
+  box-shadow: 0 4px 8px rgba(black, .2);
+  z-index: $z;
+}
+
 @mixin align-hack {
   position: absolute;
   top: 50%;
@@ -61,6 +69,11 @@ body {
     .container {
         max-width: 730px;
     }
+}
+
+/* Keyframes */
+@keyframes bounce {
+  50% {transform: scale(1.1);}
 }
 
 // Component styles are injected through grunt

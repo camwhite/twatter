@@ -1,15 +1,26 @@
+.header {
+  @include responsive-window(blue, 3);
+  h1, p {
+    color: white;
+  }
+}
+
 .login {
   @include align-hack;
   .login-btn {
     padding: 20px 40px;
-    background: dodgerblue;
+    background: deepskyblue;
     border: none;
     outline: none;
+    color: white;
+    box-shadow: -3px 3px 7px 1px rgba(black, .2);
   }
   a {
     display: block;
     margin: 10px 0;
+    color: white;
     text-align: center;
+    animation: bounce .8s infinite ease-in-out;
   }
 }
 
@@ -22,12 +33,7 @@
 }
 
 .content {
-  position: relative;
-  height: 100vh;
-  margin-top: 100vh;
-  background: lime;
-  box-shadow: 0 4px 8px rgba(black, .2);
-  z-index: 2;
+  @include responsive-window(lime, 2);
   .selling-points {
     @include align-hack;
     .point {

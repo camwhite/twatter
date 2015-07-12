@@ -1,11 +1,12 @@
-.login
-  p TWATTER
-  button(class="login-btn" ng-click="controller.login()" ng-disabled="controller.auth") {{ controller.greeting }}
-  a(ui-sref="timeline" ng-show="controller.auth") go to timeline
+.header
+  .login
+    p TWATTER
+    button(class="login-btn" ng-click="controller.login()" ng-disabled="controller.auth") {{ controller.greeting }}
+    a(ui-sref="timeline" ng-show="controller.auth") go to timeline
+  .callout
+    h1 "Like twitter but more fun"
+    p -actual user
 
-.callout
-  h1 "Like twitter but more fun"
-  p -actual user
 
 .content
   .selling-points
