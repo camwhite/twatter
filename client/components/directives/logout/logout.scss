@@ -1,0 +1,15 @@
+.logout {
+  position: absolute;
+  top: 25%;
+  right: -20px;
+  padding: 15px;
+  background: orange;
+  transform: translateY(-50%) rotate(-90deg);
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1;
+    color: white;
+  }
+}

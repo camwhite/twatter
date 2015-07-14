@@ -1,61 +1,57 @@
 .twatter {
-  h1 {
-    padding: 10px;
-    background: crimson;
-    color: gold;
-  }
-}
-.profile {
-  width: 130px;
-  height: 130px;
-  background-size: cover;
-  p {
-    padding: 7px 4px;
-    background: rgba(black, .6);
-    color: white;
-  }
-}
-
-.twat-somethin {
-  margin: 10px 0;
-  input {
-    padding: 10px;
-    background: #ccc;
-    border: 3px solid black;
-    outline: none;
-  }
-  button {
-    margin-left: 4px;
-    padding: 12px;
-    background: gold;
-    border: none;
-    outline: none;
-    animation: bounce .7s infinite ease-out;
-  }
-  p {
-    font-size: 12px;
-  }
-}
-
-.twats {
-  .twatted {
-    @include randomizer;
-    margin: 5px 0;
-    padding: 10px;
-    .remove {
-      text-align: right;
+  .user {
+    width: 130px;
+    height: 130px;
+    background-size: cover;
+    background-position: center;
+    p {
+      padding: 7px 4px;
+      background: rgba(black, .6);
+      color: white;
     }
-    .user {
-      display: flex;
-      img {
-        border-radius: 100%;
+  }
+  .twat-somethin {
+    margin: 10px 0;
+    input {
+      padding: 10px;
+      background: #ccc;
+      border: 3px solid black;
+      outline: none;
+    }
+    button {
+      margin-left: 4px;
+      padding: 12px;
+      background: gold;
+      border: none;
+      outline: none;
+      animation: bounce .7s infinite ease-out;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  .twats {
+    .twatted {
+      @include randomizer;
+      position: relative;
+      margin: 5px 0;
+      padding: 10px;
+      .remove {
+        position: absolute;
+        top: 5px;
+        right: 5px;
       }
-      a {
-        margin-left: 5px;
-        font-weight: 700;
-        align-self: center;
+      .who {
+        display: flex;
+        img {
+          border-radius: 100%;
+        }
+        a {
+          margin-left: 5px;
+          font-weight: 700;
+          align-self: center;
+        }
       }
     }
   }
 }
-

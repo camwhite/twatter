@@ -1,0 +1,8 @@
+nav(ng-show="$root.isAuth")
+  h1
+    a(ui-sref="timeline")
+      i(class="fa fa-tint")
+      span Twatter
+  .user
+    a(ui-sref="profile({id: controller.user.uid})")
+      img(ng-src="{{ controller.user.profile_image }}")

@@ -1,6 +1,5 @@
-.twatter(ng-show="controller.user")
-  h1 twatter
-  .profile(ng-style="{'background-image': 'url({{ controller.user.profile_image }})'}")
+.twatter.container(ng-show="controller.user")
+  .user(ng-style="{'background-image': 'url({{ controller.user.profile_image }})'}")
     p(ui-sref="profile") {{ controller.user.display_name }}
   .twat-somethin
     form
@@ -11,7 +10,7 @@
     .twatted(ng-repeat="twat in controller.twats | reverse")
       .remove(ng-show="controller.user.uid == twat.user.uid ")
         p(ng-click="controller.removeTwat(twat)") &times;
-      .user
+      .who
         img(ng-src="{{ twat.user.twitter_avatar }}")
         a(ui-sref="profile({id: twat.user.uid})") {{ twat.user.display_name }}
       .twat

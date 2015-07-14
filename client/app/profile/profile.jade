@@ -1,2 +1,7 @@
-.profile(ng-style="{'background-image': 'url({{ controller.user.profile_image }})'}")
-    p(ui-sref="profile") {{ controller.user.display_name }}
+.profile.container
+  h2 {{ controller.user.display_name }}
+  .profile-image
+    img(ng-src="{{ controller.user.profile_image }}")
+    .upload(ng-show="controller.currentUser.uid == controller.param")
+      i(class="fa fa-picture-o")
+      button(type="file" ng-model="controller.file" ngf-select) Up new pic

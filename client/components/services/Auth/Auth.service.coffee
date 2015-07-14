@@ -17,7 +17,7 @@ angular.module 'twatterApp'
     authData = ref.getAuth()
     # If authData exists return user
     if authData?
-      Api.get 'users', authData.uid
+      return Api.get 'users', authData.uid
   # Create user in the db
   query: (id) ->
     if id?
@@ -26,3 +26,5 @@ angular.module 'twatterApp'
       Api.get 'users'
   save: (user) ->
     Api.post 'users', user
+  update: (id, user) ->
+    Api.put 'users', id, user

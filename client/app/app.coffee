@@ -6,6 +6,7 @@ angular.module 'twatterApp', [
   'ngSanitize',
   'ui.router'
   'firebase'
+  'ngFileUpload'
 ]
 .config ($stateProvider, $urlRouterProvider, $locationProvider) ->
   $urlRouterProvider

@@ -48,27 +48,8 @@ body {
   font-family: 'Carrois Gothic SC';
 }
 
-.logout {
-  position: fixed;
-  top: 25%;
-  right: -20px;
-  padding: 15px;
-  background: orange;
-  transform: translateY(-50%) rotate(-90deg);
-  p {
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-    line-height: 1;
-    color: white;
-  }
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
+.container {
+  padding-top: 50px;
 }
 
 /* Keyframes */
@@ -82,4 +63,5 @@ body {
 @import 'profile/profile.scss';
 @import 'timeline/timeline.scss';
 @import 'directives/logout/logout.scss';
+@import 'directives/navigation/navigation.scss';
 // endinjector
